@@ -1,69 +1,94 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>隐私政策 — SSH服务器监控</title>
-  <link rel="stylesheet" href="style.css">
+  <title>HabitTrack Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+      max-width: 720px;
+      margin: 24px auto 48px;
+      padding: 0 16px;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25em; }
+    h2 { font-size: 1.1rem; margin-top: 1.75em; margin-bottom: 0.5em; }
+    p, li { font-size: 0.95rem; }
+    .meta { color: #555; font-size: 0.9rem; margin-bottom: 1.5em; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1em 0; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; }
+    th { background: #f5f5f5; }
+    a { color: #007aff; }
+  </style>
 </head>
 <body>
-  <article class="wrap">
-    <p class="top-nav"><a href="index.html">← 首页</a> <a href="terms.html">服务条款</a> <a href="support.html">支持</a></p>
-    <h1>隐私政策</h1>
-    <p class="muted">应用名称：SSH服务器监控（SSH Server Monitor）<br>生效日期：2026年5月19日 · 最后更新：2026年5月19日</p>
+  <h1>HabitTrack Privacy Policy</h1>
+  <p class="meta">
+    <strong>Effective date:</strong> 2026-05-16<br>
+    <strong>Contact:</strong> <a href="mailto:hu.hairu9603@126.com">hu.hairu9603@126.com</a><br>
+    <strong>Terms of Use:</strong> <a href="terms.html">View Terms</a>
+  </p>
 
-    <p>本政策说明开发者（「我们」）在您使用 iOS 应用「SSH服务器监控」（Bundle ID：<code>com.oxygenhu1.serverpulse</code>，含主应用与小组件扩展）时如何处理信息。使用本应用即表示您理解并同意本政策。</p>
+  <h2>1. Overview</h2>
+  <p>HabitTrack ("the App") is provided by <strong>Hairu Hu</strong>. This policy explains how we handle data related to your use of the App.</p>
 
-    <h2>1. 我们收集哪些信息</h2>
-    <p>本应用以<strong>本地处理为主</strong>，我们不会运营用于存储您服务器密码或完整监控历史的云端账户数据库。</p>
-    <ul>
-      <li><strong>SSH 服务器配置</strong>：主机名、端口、用户名、备注名称等，保存在您设备上的应用数据中。</li>
-      <li><strong>SSH 凭据</strong>：密码或私钥相关凭据通过 iOS <strong>Keychain（钥匙串）</strong> 存储，不会以明文写入小组件或 App Group 共享区。</li>
-      <li><strong>网站监控 URL</strong>：您主动添加的网站地址、分组与标签，保存在设备本地及 App Group（用于小组件展示聚合状态，不含 SSH 密码）。</li>
-      <li><strong>监控指标</strong>：通过 SSH 或 HTTP(S) 探测得到的 CPU、内存、负载、HTTP 状态码、响应时间、SSL 到期天数等，用于在应用与小组件中展示。</li>
-      <li><strong>购买状态</strong>：若您购买 Pro，由 <strong>Apple App Store</strong> 与 <strong>RevenueCat</strong> 处理交易；我们会在设备本地保存「是否已解锁 Pro」状态（App Group），用于解锁功能与小组件。</li>
-      <li><strong>诊断与崩溃</strong>：除非您另行同意系统级分析，我们不会主动收集可识别个人的诊断包；Apple 系统分析遵循 Apple 的隐私设置。</li>
-    </ul>
+  <h2>2. Data We Collect</h2>
+  <p><strong>By default, we do not collect, upload, or sell personally identifiable information.</strong></p>
+  <p>The App stores data locally on your device (and optionally in your iCloud container if enabled), including:</p>
+  <ul>
+    <li>Habit names, icons, colors, and weekly goals</li>
+    <li>Daily check-in records</li>
+    <li>In-app preferences (theme, widget setup, reminder time, etc.)</li>
+  </ul>
+  <p>If you purchase <strong>Pro</strong>, billing is handled by the <strong>Apple App Store</strong>. We do not receive your card details. Subscription status may be verified via <strong>RevenueCat</strong> only for entitlement access.</p>
 
-    <h2>2. 信息如何被使用</h2>
-    <ul>
-      <li>连接您配置的服务器并展示监控结果；</li>
-      <li>在后台按计划刷新状态（Background App Refresh）并在超阈值时发送<strong>本地通知</strong>；</li>
-      <li>在桌面小组件中显示汇总信息；</li>
-      <li>验证 Pro 订阅并解锁相应功能。</li>
-    </ul>
+  <h2>3. How Data Is Used</h2>
+  <p>Data is used only to:</p>
+  <ul>
+    <li>Display your habits, stats, and widgets</li>
+    <li>Send local reminders if you grant permission</li>
+    <li>Support backup and restore (iCloud or JSON export)</li>
+  </ul>
 
-    <h2>3. 网络通信</h2>
-    <ul>
-      <li><strong>SSH</strong>：应用会从您的设备直接连接您填写的 Linux 服务器（使用第三方库 Citadel / SwiftNIO SSH）。</li>
-      <li><strong>HTTP(S) 网站探测</strong>：从您的设备向您填写的 URL 发起请求以检测可用性与 SSL 信息。</li>
-      <li><strong>RevenueCat</strong>：用于内购校验与恢复购买，遵循 <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat 隐私政策</a>。</li>
-      <li>我们不会将您的 SSH 密码上传至自有服务器。</li>
-    </ul>
+  <h2>4. Data Sharing</h2>
+  <p>We do not sell your habit data.</p>
+  <p>Third-party services used only when relevant features are enabled:</p>
+  <table>
+    <thead>
+      <tr><th>Service</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Apple iCloud</td><td>Optional backup storage</td></tr>
+      <tr><td>Apple App Store</td><td>Subscription payment processing</td></tr>
+      <tr><td>RevenueCat</td><td>Subscription entitlement verification</td></tr>
+    </tbody>
+  </table>
 
-    <h2>4. 存储与共享</h2>
-    <ul>
-      <li>监控配置与指标默认保存在<strong>您的 iPhone</strong> 上；App 与小组件通过 App Group <code>group.com.oxygenhu1.serverpulse</code> 共享非敏感快照数据。</li>
-      <li>我们不会出售您的个人信息。</li>
-      <li>除法律要求或保护权利所必需外，我们不会向第三方披露您的个人数据。</li>
-    </ul>
+  <h2>5. Storage and Security</h2>
+  <ul>
+    <li>Data is primarily stored on your iPhone/iPad.</li>
+    <li>App Group storage is used to share data between app and widget.</li>
+    <li>You can export JSON anytime or delete the app to remove local data.</li>
+  </ul>
 
-    <h2>5. 数据保留与删除</h2>
-    <p>删除应用或应用内删除服务器/网站条目后，相应本地数据会被移除。Keychain 中的凭据在删除对应服务器配置时一并清除。卸载应用将删除本地应用数据。</p>
+  <h2>6. Your Rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li><strong>Access/export</strong> data (JSON, CSV for Pro)</li>
+    <li><strong>Delete</strong> data (delete app or overwrite with empty backup)</li>
+    <li><strong>Disable</strong> iCloud sync and notifications</li>
+  </ul>
 
-    <h2>6. 儿童隐私</h2>
-    <p>本应用不面向 13 周岁以下儿童，我们不会故意收集儿童个人信息。</p>
+  <h2>7. Children's Privacy</h2>
+  <p>The App is not directed to children under 13, and we do not knowingly collect children's personal information.</p>
 
-    <h2>7. 您的权利</h2>
-    <p>您可在应用内编辑或删除服务器与网站配置。关于 App Store 购买与退款，请通过 Apple 支持处理。</p>
+  <h2>8. Policy Updates</h2>
+  <p>We may update this policy. Continued use of the App after updates means you accept the revised policy.</p>
 
-    <h2>8. 政策变更</h2>
-    <p>我们可能更新本政策并在本页面公布新版生效日期。重大变更时，我们会在应用或商店页面提供合理提示。</p>
-
-    <h2>9. 联系我们</h2>
-    <p>隐私相关疑问请联系：<a href="mailto:huhairu9603@126.com">huhairu9603@126.com</a></p>
-
-    <p class="footer"><a href="index.html">返回首页</a></p>
-  </article>
+  <h2>9. Contact</h2>
+  <p>For privacy-related questions, contact: <a href="mailto:hu.hairu9603@126.com">hu.hairu9603@126.com</a></p>
 </body>
 </html>
